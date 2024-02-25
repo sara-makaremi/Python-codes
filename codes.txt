@@ -1,0 +1,525 @@
+import matplotlib.pyplot as plt
+year=[1950,1970,1990,2010]
+pop=[2.365,4.326,5.326,7.236]
+plt.plot(year,pop)
+plt.show()
+print(year[-1])
+print(pop[-1])
+
+import matplotlib.pyplot as plt
+year=[1950,1970,1990,2010]
+pop=[2.365,4.326,5.326,7.236]
+plt.plot(year,pop)
+plt.xlabel('years')
+plt.ylabel('number')
+plt.title('in the name of god')
+plt.yticks([2,4,6,8,10],['2B','4B','6B','8B','10B'])
+plt.show()
+
+
+import matplotlib.pyplot as plt
+year=[1950,1970,1990,2010]
+pop=[2.365,4.326,5.326,7.236]
+plt.xlabel('years')
+plt.ylabel('number')
+plt.scatter(year,pop)
+plt.xscale('log')
+plt.yticks([0,2,4,6,8])
+plt.show()
+
+
+import matplotlib.pyplot as plt
+year=[1950,1970,1990,2010]
+pop=[2.365,4.326,5.326,7.236]
+plt.scatter(year,pop)
+plt.xlabel('years')
+plt.ylabel('number')
+plt.show()
+
+
+import matplotlib.pyplot as plt
+values=[8,2,6,5,3,1,4,5,20,6,9,7,0,2,5,4,8]
+plt.hist(values,bins=5)
+plt.show()
+plt.clf()
+plt.hist(values,bins=12)
+plt.title('histogRAM')
+plt.show()
+plt.clf()
+
+
+import matplotlib.pyplot as plt
+year=[1950,1970,1990,2010]
+pop=[2.365,4.326,5.326,7.236]
+plt.scatter(year,pop)
+plt.xscale('log')
+plt.xlabel('GDP per capita[in usd]')
+plt.ylabel('Life expectancy[in years]')
+plt.title('word development in 2007')
+plt.show()
+
+
+import matplotlib.pyplot as plt
+year=[1950,1970,1990,2010]
+pop=[5,3,8,7]
+plt.scatter(x=year, y= pop,   alpha=0.8)
+plt.xscale('log')
+plt.xlabel('GDP per capita[in usd]')
+plt.ylabel('Life expectancy[in years]')
+plt.title('word development in 2007')
+plt.xticks([1000,10000,100000],['1k','10k','100k'])
+plt.grid(True)
+plt.text(1550,71,'India')
+plt.show()
+
+
+world={'afghanestan':30.55, 'albania':2.77 , 'algeria':39.21}
+world['albania']
+pop=[3.55,2.77,39.21]
+countries=['afghanestan','albania','algeria']
+pop[1]
+countries=['spain' , 'france', 'germany','norway']
+capitals=['madrid', 'paris', 'berlin', 'oslo']
+ind_gr=countries.index('germany')
+print(capitals[ind_gr])
+europ={'spain':'madrid' , 'france':'paris', 'germany' : 'berlin' , 'norway':'oslo'}
+print(europ.keys())
+print(europ['norway'])
+europe={'spain': {'capital': 'madrid' , 'population': 32.52}, 
+       'france':{ 'capital' : 'paris' , 'population': 85.23} ,
+       'germany':{ 'capital' :'berlin' , 'population' : 63.25} ,
+       'norway': { 'capital' : 'oslo' , 'population': 12.25}}
+print(europe['france']['capital'])
+data={'capital' : 'rome' , 'population' : 59.83}
+europe['italy']=data
+print(europe)
+dict={
+    'country':['brazil','russia','india' , 'china' , 'south africa'],
+    'capital':['brazilia','moscow','newdehli' , 'beiging' ,'pretoria'],
+    'area' :[80516,17.10,3.286,9.597,1.221],
+    'population':[200.4,143.5,1253,1357,52.98]
+}
+
+
+
+import pandas as pd
+dict={
+    'country':['brazil','russia','india' , 'china' , 'south africa'],
+    'capital':['brazilia','moscow','newdehli' , 'beiging' ,'pretoria'],
+    'area' :[80516,17.10,3.286,9.597,1.221],
+    'population':[200.4,143.5,1253,1357,52.98]
+}
+brics=pd.DataFrame(dict)
+print(brics)
+type(brics['country'])
+brics.index=['BR','RU','IN','CH','SA']
+brics
+brics['country']
+brics[['capital', 'population']]
+names=['united state', 'australia', 'japan','india' ,'russia','morroco','egypt']
+dr= [True, False, False , False , True , True , True]
+cpc = [809,731,588, 18,200,70,75]
+import pandas as pd
+my_dict={'country' : names , 'drives_right':dr , 'cars_per_cap':cpc}
+cars= pd.DataFrame(my_dict)
+print(cars)
+row_labels=['us','aus','jpn','in' ,'ru','mor','eg']
+cars.index=row_labels
+cars.index
+
+brics[1:4]
+
+brics
+
+dict={
+    'country':['brazil','russia','india' , 'china' , 'south africa'],
+    'capital':['brazilia','moscow','newdehli' , 'beiging' ,'pretoria'],
+    'area' :[80516,17.10,3.286,9.597,1.221],
+    'population':[200.4,143.5,1253,1357,52.98]
+}
+import pandas as pd
+brics=pd.DataFrame(dict)
+print(brics)
+type(brics['country'])
+
+brics
+
+brics[['country','capital']]
+
+brics.index=['BR','RU','IN','CH','SA']
+brics
+
+brics.loc['RU']
+
+brics.loc[['RU','IN','CH']]
+
+brics.loc[['RU','IN','CH'],['country', 'capital']]
+
+brics.loc[:,['country','capital']]
+
+brics.iloc[[1,2,3]]
+
+brics.iloc[[1,2,3],[0,1]]
+
+brics.iloc[:,[0,1]]
+
+
+
+
+
+import pandas as pd
+dict={
+    'country':['brazil','russia','india' , 'china' , 'south africa'],
+    'capital':['brazilia','moscow','newdehli' , 'beiging' ,'pretoria'],
+    'area' :[80516,17.10,3.286,9.597,1.221],
+    'population':[200.4,143.5,1253,1357,52.98]
+}
+brics=pd.DataFrame(dict)
+print(brics)
+type(brics['country'])
+brics.index=['BR','RU','IN','CH','SA']
+brics
+brics['country']
+brics[['capital', 'population']]
+names=['united state', 'australia', 'japan','india' ,'russia','morroco','egypt']
+dr= [True, False, False , False , True , True , True]
+cpc = [809,731,588, 18,200,70,75]
+import pandas as pd
+my_dict={'country' : names , 'drives_right':dr , 'cars_per_cap':cpc}
+cars= pd.DataFrame(my_dict)
+print(cars)
+row_labels=['us','aus','jpn','in' ,'ru','mor','eg']
+cars.index=row_labels
+cars.index
+
+brics[1:4]
+
+brics
+
+dict={
+    'country':['brazil','russia','india' , 'china' , 'south africa'],
+    'capital':['brazilia','moscow','newdehli' , 'beiging' ,'pretoria'],
+    'area' :[80516,17.10,3.286,9.597,1.221],
+    'population':[200.4,143.5,1253,1357,52.98]
+}
+import pandas as pd
+brics=pd.DataFrame(dict)
+print(brics)
+type(brics['country'])
+
+brics
+
+brics[['country','capital']]
+
+brics.index=['BR','RU','IN','CH','SA']
+brics
+
+brics.loc['RU']
+
+brics.loc[['RU','IN','CH']]
+
+brics.loc[['RU','IN','CH'],['country', 'capital']]
+
+brics.loc[:,['country','capital']]
+
+brics.iloc[[1,2,3]]
+
+brics.iloc[[1,2,3],[0,1]]
+
+brics.iloc[:,[0,1]]
+
+
+
+
+import numpy as np
+import pandas as pd
+error = 50.0
+while error > 1 :
+      error= error / 4
+print(error)
+x=1
+while x < 4 : 
+    print(x)
+    x=x+1
+
+
+
+
+    import numpy as np
+np_height=np.array([1.73,1.68,1.71,1.89,1.79])
+np_weight=np.array([6504,59.2,63.6,88.4,68.7])
+type(np_height) 
+import numpy as np
+import pandas as pd
+fam = [ 1.73, 1.68, 1.71 , 1.89]
+fam
+
+
+
+import numpy as np
+import pandas as pd
+error = 50.0
+while error > 1 :
+      error= error / 4
+      print(error)
+import matplotlib.pyplot as plt
+year=[1950,1970,1990,2010]
+pop=[2.519,3.623,5.235,6.548]
+plt.plot(year,pop)
+plt.show()  
+
+
+x= [['a', 'b'],['c','d']]
+[x[0][0],x[1][0]]
+import numpy as np
+np_x=np.array(x)
+np_x[:,0]
+
+import numpy as np
+np_mat=np.array([[1,2],[3,4],[5,6]])
+np_mat*2
+np_mat+np.array([10,10])
+np_mat+ np_mat
+
+import numpy as np
+x=[1,4,8,3,10,12]
+y=np.mean(x)
+z=np.median(x)
+z
+
+import numpy as np
+np_positions=np.array(positions)
+np_height=np.array(heights)
+gk_heights=np_heights[np_positions='GK']
+print(gk_height)
+other_heights=np_heights[np_positions ]
+
+import matplotlib.pyplot as plt
+year=[1950,1970,1990,2010]
+pop=[2.519,3.623,5.235,6.548]
+plt.plot(year,pop)
+plt.show()
+
+import matplotlib.pyplot as plt
+year=[1950,1970,1990,2010]
+pop=[2.519,3.623,5.235,6.548]
+plt.scatter(year,pop)
+plt.show()
+
+print(year[-1])
+print(pop[-1])
+import matplotlib.pyplot as plt
+plt.plot(year,pop)
+plt.show()
+
+
+
+baseball=[[180,78.4],[215,102.7],[210,98.5],[188,75.2]]
+import numpy as np
+np_baseball=np.array(baseball)
+np_baseball.shape
+print(type(np_baseball))
+print(np_baseball.shape)
+
+
+first=[11.25,18.0,20.6, 11.25]
+second=[10.75,9.50]
+full=first+second
+full
+
+full_sorted=sorted(full,reverse=True)
+print(full_sorted)
+
+first.index(18.0)
+first.count(20.6)
+
+first.count(11.25)
+full.index(10.75)
+
+sister='liz'
+sister.capitalize()
+
+sister.release('z','s')
+
+
+sister.replace('z','s')
+
+full.append(200)
+full
+
+place='poolhouse'
+print(place)
+place_up=place.upper()
+print(place,place_up)
+
+print(place.count('o'))
+
+full.reverse()
+print(full)
+
+
+
+import numpy as np
+np.random.seed(123)
+coin= np.random.randint(0,2) 
+print(coin)
+if coin == 0:
+    print("heads")
+else :
+    print("tails")
+
+
+
+import numpy as np
+print(np.random.randint(4,8))
+
+import numpy as np
+np.random.seed()
+step = 50
+dice = np.random.randint(1,7)
+if dice <= 2 :
+    step = step - 1
+elif dice > 2 :
+    step = step + 1
+else:
+    step = step + np.random.randint(1,7)
+print(dice)    
+print(step)
+ 
+
+import numpy as np
+np.random.seed(123)
+outcomes =[]
+for x in range(10) :
+    coin = np.random .randint(0,2)
+    if coin == 0 :
+        outcomes.append("heads")
+    else:
+        outcomes.append("tails")
+print(outcomes)        
+    
+
+import numpy as np
+np.random.seed(123)
+tails = [0]
+for x in range(10) :
+    coin= np.random.randint(0,2)
+    tails.append(tails[x] + coin)
+print(tails)    
+
+double= lambda x:x*2
+print(double(5))
+
+my_list = [1,5,4,6,8,11,3,12]
+new_list = list(filter(lambda x:(x%2==0) ,my_list ))
+print(new_list)
+
+my_list =[1,5,4,6,8,11,3,12]
+new_list=list(map(lambda x:x*2 , my_list))
+print(new_list)
+
+double= lambda x,y: (x*2)+y
+print(double(7,2))
+
+def polymony(x):
+    return x**2+5*x+4
+print(polymony(-4))
+
+
+print((lambda x: x**2+5*x+4)(-4))
+
+echo_word =lambda word1, echo : word1*echo
+result=echo_word('hey' , 5)
+print(result)
+
+spells=['protego','accio','expecto','patronum','legilimens']
+shout_spells=map(lambda item : item+"!!!", spells)
+shout_spells_list=list(shout_spells)
+print(shout_spells_list)
+
+def raise_val(n):
+    def inner(x):
+              raised= x**n
+              return raised
+       
+     
+              square=raise_val(2)
+              cube=raise_val(3)
+              print(square(2),cube(4))
+
+def outer():
+    n=1
+    def inner():
+        nonlocal n
+        n=2
+        print(n)
+   inner()
+    print(n)
+    
+
+for i  in range(4):
+    print(i)
+
+word='Da'
+it= iter(word)
+next(it)
+
+next(it)
+
+
+
+word='Data'
+it=iter=(word)
+print(*it)
+
+pythonistas={'hugo': 'bowne-anderson', 'francis' :'castro'}
+for key, value in pythonistas.items():
+    print(key , value)
+
+import numpy as np
+np.random.seed(123)
+final_tails=[]
+for x in range(100):
+    tails=[0]
+    for x in range(10):
+        coin = np.random.randint(0,2)
+        tails.append(tails[x]+coin)
+    final_tails.append(tails[-1])    
+print(final_tails)    
+
+import numpy as np
+import matplotlib.pyplot as plt
+np.random.seed(123)
+final_tails=[]
+for x in range(100):
+    tails=[0]
+    for x in range(10):
+        coin=np.random.randint(0,2)
+        tails.append(tails[x]+coin)
+    final_tails.append(tails[-1])   
+plt.hist(final_tails, bins=10)    
+plt.show()
+
+all_walks=[]
+for i in range(10):
+    random_walk=[0]
+    for x in range(100):
+        step= random_walk[-1]
+        dice=np.random.randint(1,7)
+        if dice<=2:
+            step=max(0, step-1)
+        elif dice<=5:
+            step=step+1
+        else:
+            step=step+np.random.randint(1,7)
+            random_walk.append(step)
+    all_walks.append(random_walk)       
+print(all_walks)    
+
+squares=[i**2 for i in range(0,10)]
+print(squares)
+
+matrix=[[col for col in range(5)] for row in range(5)]
+for row in matrix:
+    print(row)
+
